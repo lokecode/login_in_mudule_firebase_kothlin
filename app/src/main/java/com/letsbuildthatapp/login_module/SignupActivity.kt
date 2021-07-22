@@ -21,6 +21,8 @@ class SignupActivity : AppCompatActivity() {
             val email = editText.text.toString()
             val password = editText2.text.toString()
 
+            startActivity(Intent( this@SignupActivity, LoginActivity::class.java))
+
             if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password))
                 Toast.makeText(this, "გთხოვთ შეავსოთ ყველა ველი", Toast.LENGTH_LONG).show()
             else if (password.length <=5){
